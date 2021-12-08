@@ -1,15 +1,15 @@
 package com.example.jungle.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.Date;
 
-@Controller
+@RestController
 public class HelloController {
 
-    @GetMapping("hello")
-    public String Hello(Model model){
-        model.addAttribute("data", "hello!!");
-        return "hello";
+    @GetMapping("/api/hello")
+    public String hello(){
+        return "안녕하세요. 현재 서버시간은 "+new Date() +"입니다. \n";
     }
 }
+
