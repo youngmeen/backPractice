@@ -10,7 +10,11 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 class MemberServiceTest {
 
-    MemberService memberService = new MemberService();
+    MemberService memberService;
+
+    public MemberServiceTest(MemberService memberService) {
+        this.memberService = memberService;
+    }
 
     @Test
     void joinTest() {

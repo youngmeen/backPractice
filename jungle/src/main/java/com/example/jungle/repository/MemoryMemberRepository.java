@@ -1,10 +1,12 @@
 package com.example.jungle.repository;
 
 import com.example.jungle.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import javax.swing.text.html.Option;
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
